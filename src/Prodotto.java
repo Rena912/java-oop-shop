@@ -3,11 +3,17 @@ public class Prodotto {
 
     public int codice;
     
-    public String nome;
+    public String nome = "Zaino";
 
     public String descrizione;
 
     public double prezzo;
+
+    public String nomeCodice(){
+        String nomeEsteso = nome +"/"+ codice ;
+        return nomeEsteso;
+
+    } 
 
     
 
