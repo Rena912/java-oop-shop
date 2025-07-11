@@ -1,4 +1,6 @@
 
+import java.util.Random;
+
 public class Prodotto {
 
     public int codice;
@@ -9,25 +11,25 @@ public class Prodotto {
 
     public double prezzo;
 
+    public Prodotto() {
+        Random random = new Random();
+        this.codice = random.nextInt(1000);
+    }
+
     public String nomeCodice(){
-        String nomeEsteso = nome +"/"+ codice ;
+        String nomeEsteso = nome +"-"+ codice ;
         return nomeEsteso;
 
     } 
 
-    
-
     public double prezzobase(){
-        double prezzoProdotto = 25.5;
-        prezzo = prezzoProdotto;
-        return prezzoProdotto;
+       return this.prezzo;
     }
+
     public double iva;
     
     public double prezzoIva(){
-        double iva = prezzobase() + prezzobase() * 22 / 100 ;
-        return iva;
-
+        return prezzobase() + prezzobase() * iva / 100 ;
     }
     
 
